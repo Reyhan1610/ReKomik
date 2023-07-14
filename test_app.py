@@ -1,5 +1,5 @@
 import unittest
-from app import app, data, tfidf, cosine_sim, tfidf_matrix
+from main import app, data, tfidf, cosine_sim, tfidf_matrix
 from preprocessing import preprocess
 from search import search
 
