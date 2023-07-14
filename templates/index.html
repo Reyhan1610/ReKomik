@@ -1,0 +1,28 @@
+{% include 'layout/header.html' %}
+
+	<!--<h1>Sistem Rekomendasi Komik</h1>
+	<form method="POST" action="{{ url_for('search_page') }}">
+        <input type="text" name="query" placeholder="Masukkan kata kunci...">
+        <button type="submit">Cari</button>
+    </form>-->
+    <head>
+        <title>Home</title>
+    </head>
+
+    <body class="index">
+
+        <div class="container">
+            <h1>Sistem Rekomendasi Komik</h1>
+            <h3>Masukkan Kata Kunci Untuk Menemukan Komik Yang Sesuai Dengan Kriteria</h3>
+            <form method="POST" action="{{ url_for('search_page') }}">
+                <input type="text" name="query" placeholder="Masukkan kata kunci...">
+                <button type="submit">
+                    <i class="fas fa-search"></i>
+                </button>
+              </div>
+            </form>
+          </div>
+          
+    </body>
+
+{% include 'layout/footer.html' %}

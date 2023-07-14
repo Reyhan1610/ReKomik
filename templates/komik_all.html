@@ -1,0 +1,32 @@
+{% include 'layout/header.html' %}
+<head>
+	<title>Komik All</title>
+</head>
+
+<body>
+	<h1>Data Semua Komik</h1>
+
+	<table>
+		<thead>
+			<tr>
+				<th>No</th>
+                <th>Judul</th>
+				<th>Sinopsis</th>
+			</tr>
+		</thead>
+		<tbody>
+            {% for index, row in data.iterrows() %}
+            <tr>
+                <td>{{ loop.index }}</td>
+                <td>{{ row['judul'] |title }} </td>
+                <td>{{ row['sinopsis'] }} </td>
+            </tr>
+            {% endfor %}
+        </tbody>
+	</table>
+    
+	<div class="center">
+		<a href="{{ url_for('homepage') }}"><button class="button">Kembali ke Index</button></a>
+	</div>
+	
+{% include 'layout/footer.html' %}

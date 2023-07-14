@@ -1,0 +1,16 @@
+{% include 'layout/header.html' %}
+<head>
+	<title>Komik</title>
+</head>
+
+<body>
+	<h1>Data Komik Elex Media dan Webtoon Indonesia</h1>
+	<div class="center">
+        <img src="data:image/png;base64,{{ img_uri }}" alt="Combined Chart">
+	</div>
+		
+	<div class="center">
+		<a href="{{ url_for('homepage') }}"><button class="button">Kembali ke Index</button></a>
+	</div>
+	
+{% include 'layout/footer.html' %}

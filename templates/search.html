@@ -1,0 +1,50 @@
+{% include 'layout/header.html' %}
+<head>
+	<title>Search</title>
+</head>
+
+<body>
+	<h1>Hasil Pencarian - Rekomendasi Komik</h1>
+	{% if error_message %}
+	<div class="center">
+		<h3 style="color: red;">{{ error_message }}</h3>
+	</div>
+	{% else %}
+	<h3>Menampilkan hasil pencarian untuk: <strong>{{ query }}</strong></h3>
+	
+	{% if img_b64 %}
+	<div class="center">
+		<img src="data:image/png;base64,{{ img_b64 }}" alt="Histogram">
+	</div>
+	{% endif %}
+
+	
+	<table>
+		<thead>
+			<tr>
+				<th>No.</th>
+				<th>Judul</th>
+				<th>Sinopsis</th>
+				<th>Similarity Score</th>
+			</tr>
+		</thead>
+		<tbody>
+			{% for result in results %}
+            {% if result['similarity_score'] >= 0.2 %}
+            <tr>
+				<td>{{ loop.index }}</td>
+				<td>{{ result['judul']|remove_punctuation|title }}</td>
+                <td>{{ result['sinopsis'] }}</td>
+                <td>{{ result['similarity_score'] }}</td>
+            </tr>
+            {% endif %}
+            {% endfor %}
+        </tbody>
+	</table>
+	{% endif %}
+
+	<div class="center">
+		<a href="{{ url_for('homepage') }}"><button class="button">Kembali ke Beranda</button></a>
+	</div>
+	
+{% include 'layout/footer.html' %}

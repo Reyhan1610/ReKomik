@@ -1,0 +1,246 @@
+/* Style untuk header */
+header {
+	position: fixed;
+	left: 0;
+	top: 0;
+	background-color: #112D4E;
+	color: #F9F7F7;
+	padding: 20px;
+	width: 100%;
+}
+
+header h1 {
+	margin: 0;
+}
+
+nav ul {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+	display: flex;
+}
+
+nav li {
+	margin-right: 20px;
+}
+
+nav li:last-child {
+	margin-right: 0;
+}
+
+nav a {
+	color: #F9F7F7;
+	text-decoration: none;
+	font-size: 20px;
+}
+
+main {
+	margin-top: 100px; /* Set margin top sama dengan tinggi header */
+	margin-bottom: 100px;
+}
+
+/* Style untuk form 
+form {
+	margin-top: 20px;
+}
+
+input[type=text] {
+	padding: 10px;
+	border: none;
+	border-radius: 5px;
+	width: 70%;
+}
+
+button[type=submit] {
+	padding: 10px;
+	background-color: #333;
+	color: #fff;
+	border: none;
+	border-radius: 5px;
+	cursor: pointer;
+}
+
+/* Style untuk tabel 
+table {
+	width: 30;
+	margin-top: 20px;
+	border-collapse: collapse;
+}
+
+table th, table td {
+	width: 30;
+	padding: 10px;
+	border: 1px solid #ddd;
+}
+
+table th {
+	background-color: #f2f2f2;
+}
+
+/* Style untuk footer */
+footer {
+	position: fixed;
+	left: 0;
+	bottom: 0;
+	width: 100%;
+	background-color: #112D4E;
+	color: #F9F7F7;
+	padding: 10px;
+	text-align: center;
+}
+
+body {
+	background-color: #DBE2EF;
+	font-family: Arial, sans-serif;
+	font-size: 16px;
+	margin: 0;
+	padding: 0;
+}
+/* Style untuk body halaman index */
+body.index {
+	background-image: url('https://i.redd.it/4efw39ipq8581.jpg');
+	background-repeat: no-repeat;
+	background-size: cover;
+  }
+  
+h1 {
+	color: #112D4E;
+	font-size: 36px;
+	font-weight: bold;
+	margin: 20px 0;
+	text-align: center;
+}
+.container {
+    background-color: #DBE2EF;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    width: 90%;
+    max-width: 600px;
+    margin: auto;
+    padding: 20px;
+    text-align: center;
+}
+
+form {
+	display: flex;
+	justify-content: center;
+	margin: 40px 0;
+}
+input[type="text"] {
+	border: none;
+	border-radius: 10px;
+	box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+	font-size: 18px;
+	padding: 10px;
+	width: 325px;
+}
+.button {
+	background-color: #112D4E;
+	border: none;
+	border-radius: 10px;
+	box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+	padding: 16px 32px;
+	text-align: center;
+	text-decoration: none;
+	display: block;
+	font-size: 16px;
+	margin: 4px 2px;
+	transition-duration: 0.4s;
+	cursor: pointer;
+	color: #F9F7F7;
+}
+button[type="submit"] {
+	background-color: #112D4E;
+	border: none;
+	border-radius: 10px;
+	box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+	color: #F9F7F7;
+	cursor: pointer;
+	font-size: 18px;
+	margin-left: 10px;
+	padding: 10px 20px;
+}
+button:hover {
+	background-color: #3F72AF;
+}
+p {
+	color: #F9F7F7;
+	font-size: 18px;
+	margin-bottom: 20px;
+	text-align: center;
+}
+table {
+	border-collapse: collapse;
+	box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+	margin: 0 auto;
+	width: 80%;
+	border-radius: 10px; /* menentukan sudut tumpul */
+	overflow: hidden; /* menghilangkan bagian yang keluar dari kotak */
+}
+th, td {
+	border: 1px solid #112D4E;
+	background-color: #F9F7F7;
+	padding: 10px;
+	text-align: center;
+}
+th {
+	background-color: #3F72AF;
+	font-weight: bold;
+}
+strong {
+	color: #112D4E;
+	font-weight: 900;
+}
+h3 {
+	color: #112D4E;
+	font-size: 18px;
+	margin-bottom: 20px;
+	text-align: center;
+}
+
+.center {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	margin-top: 20px;
+}
+
+/* Gaya dropdown */
+.dropdown {
+	position: relative;
+	display: inline-block;
+}
+
+.dropdown-content {
+	display: none;
+	position: absolute;
+	background-color: #112D4E;
+	min-width: 210px;
+	box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+	z-index: 1;
+}
+
+.dropdown-content a {
+	color: #F9F7F7;
+	font-size: 15px;
+	padding: 12px 16px;
+	text-decoration: none;
+	display: block;
+	transition: background-color 0.3s;
+}
+
+.dropdown-content a:hover {
+	background-color: #3F72AF;
+}
+
+.dropdown:hover .dropdown-content {
+	display: block;
+}
+
+/* Gaya ikon dropdown */
+.dropbtn::after {
+	content: "\f0d7";
+	font-family: "Font Awesome 5 Free";
+	font-weight: 900;
+	margin-left: 10px;
+}
